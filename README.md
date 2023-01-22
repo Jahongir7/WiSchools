@@ -1,1 +1,1 @@
-# WiSchools
+# WiSchools project
