@@ -27,6 +27,11 @@ nav ul{
 nav ul li{
     margin-right: 20px;
 }
+nav ul li:last-child {
+    position: absolute;
+    top: 2%;
+    right: 0;
+}
 .nav-right a,
 .nav-right button
 {
@@ -381,4 +386,49 @@ form{
     display: grid;
     gap:0;
     grid-template-columns: 1fr 0.5fr;
+}
+nav ul.active{
+    display: block;
+    left: 0;
+}
+#ham-menu{
+    display: none;
+}
+
+@media (max-width:767px) {
+    .container{
+        width: 97%;
+    }
+    nav ul li{
+        margin-top: 30px;
+        text-align: center;
+    }
+    nav ul{
+        width: 100vw;
+        left: -130vw;
+        position: fixed;
+        top: 73px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center !important;
+        background-color:#fff;
+        transition: all 0.5s;
+    }
+    nav ul li:last-child{
+        position: static;
+    }
+    #ham-menu{
+        font-size: 32px;
+        position: absolute;
+        top: 2%;
+        right: 2%;
+        display: block;
+    }
+    .nav-right{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 50px;
+    }
 }
