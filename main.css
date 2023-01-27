@@ -72,6 +72,10 @@ main .left{
 main .left span{
     color: #09B451;
 }
+.right img{
+    width: 100%;
+    height: auto;
+}
 .info{
     display: flex;
     justify-content: space-between;
@@ -82,11 +86,13 @@ main .left span{
     background-color: #DDFFFF;
     padding: 15px;
     border-radius: 5px;
+    margin: 0 5px;
 }
 .info-item .icon{
     background-color: #09B451;
     color: #fff;
-    padding: 10px 18px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -102,7 +108,7 @@ main .left span{
 }
 .text b{
     font-family: 'Poppins';
-    font-size: 32px;
+    font-size: 2rem;
     color: #333;
 }
 .text p{
@@ -236,6 +242,9 @@ main .left span{
     display: flex;
     font-family: 'Poppins';
     margin-bottom: 3.25rem;
+}
+.review-text h1 u{
+    color: #09B451;
 }
 .review-text i{
     padding: 15px 18px;
@@ -381,6 +390,7 @@ form input{
     padding: 10px 20px;
     color: #09B451;
     margin: 0;
+    width: 200px !important;
 }
 form{
     display: grid;
@@ -415,6 +425,7 @@ nav ul.active{
         justify-content: center !important;
         background-color:#fff;
         transition: all 0.5s;
+        padding: 0;
     }
     nav ul li:last-child{
         position: static;
@@ -432,4 +443,86 @@ nav ul.active{
         align-items: center;
         margin-bottom: 50px;
     }
+    /*Main qism*/
+    main{
+        flex-wrap: wrap;
+    }
+    main .left b{
+        font-size: 2.5rem;
+    }
+    .info{
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .info-item{
+        margin-top: 30px;
+        margin-right: 0;
+        margin-left: 0;
+    }
+    .text b{
+        font-size: 1.75rem;
+        display: inline-block;
+        width: 80%;
+    }
+    /*Cards*/
+
+    .cards{
+        padding: 0 1.75rem;
+    }
+    .education h1{
+        font-size: 1.75rem;
+    }
+    .education-main{
+        flex-wrap: wrap;
+    }
+    .edu-left .job{
+        right: -30vw;
+    }
+    .edu-right b{
+        font-size: 1.75rem;
+    }
+    .reviews{
+        flex-direction: column;
+    }
+    .r-card-1{
+        transform: scale(0.7); 
+        margin: 0;
+    }
+    .reviews div:nth-child(2){
+        width: 70% !important;
+    }
+    .instructors{
+        padding: 0 1.75rem;
+    }
+    .call img{
+        display: none;
+    }
+    .call-right{
+        width: 100%;
+        text-align: center;
+    }
+    .call-right h1{
+        font-size: 1.5rem;
+    }
+    footer{
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 20px;
+    }
+    footer h3{
+        font-size: 1.3rem;
+    }
+    .footer-main{
+        flex-direction: column-reverse;
+    }
+    .footer-logo{
+        width: 90vw;
+    }
+    .footer-mob ul:nth-child(5),
+    .footer-mob ul:nth-child(4){
+        display: none;
+    }
+}
+.footer-mob{
+    display: flex;
 }
