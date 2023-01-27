@@ -13,18 +13,22 @@
     <div class="container">
         <nav>
             <img src="./images/logo.png" alt="">
-            <ul>
+            <i class="fas fa-bars" id="ham-menu"></i>
+            <ul id="nav-bar">
                 <li>Home</li>
                 <li>Courses</li>
                 <li>Instructors</li>
                 <li>Schedules</li>
                 <li>Contact us</li>
+                <li>
+                    <div class="nav-right">
+                        <i class="fas fa-search"></i>
+                        <a href="#">Login</a>
+                        <button class="button">Register</button>
+                    </div>
+                </li>
             </ul>
-            <div class="nav-right">
-                <i class="fas fa-search"></i>
-                <a href="#">Login</a>
-                <button class="button">Register</button>
-            </div>
+            <div></div>
         </nav>
         <main>
             <div class="left">
@@ -89,7 +93,8 @@
                         <div class="detail-top">
                             <p>Learn Marketing from Top Instructors.</p>
                             <div class="card-star">
-                                <i class="far fa-star"></i><p>4.5</p>
+                                <i class="far fa-star"></i>
+                                <p>4.5</p>
                             </div>
                         </div>
                         <div class="detail-bottom">
@@ -112,7 +117,8 @@
                         <div class="detail-top">
                             <p>Learn Marketing from Top Instructors.</p>
                             <div class="card-star">
-                                <i class="far fa-star"></i><p>4.5</p>
+                                <i class="far fa-star"></i>
+                                <p>4.5</p>
                             </div>
                         </div>
                         <div class="detail-bottom">
@@ -135,7 +141,8 @@
                         <div class="detail-top">
                             <p>Learn Marketing from Top Instructors.</p>
                             <div class="card-star">
-                                <i class="far fa-star"></i><p>4.5</p>
+                                <i class="far fa-star"></i>
+                                <p>4.5</p>
                             </div>
                         </div>
                         <div class="detail-bottom">
@@ -158,7 +165,8 @@
                         <div class="detail-top">
                             <p>Learn Marketing from Top Instructors.</p>
                             <div class="card-star">
-                                <i class="far fa-star"></i><p>4.5</p>
+                                <i class="far fa-star"></i>
+                                <p>4.5</p>
                             </div>
                         </div>
                         <div class="detail-bottom">
@@ -181,7 +189,8 @@
                         <div class="detail-top">
                             <p>Learn Marketing from Top Instructors.</p>
                             <div class="card-star">
-                                <i class="far fa-star"></i><p>4.5</p>
+                                <i class="far fa-star"></i>
+                                <p>4.5</p>
                             </div>
                         </div>
                         <div class="detail-bottom">
@@ -204,7 +213,8 @@
                         <div class="detail-top">
                             <p>Learn Marketing from Top Instructors.</p>
                             <div class="card-star">
-                                <i class="far fa-star"></i><p>4.5</p>
+                                <i class="far fa-star"></i>
+                                <p>4.5</p>
                             </div>
                         </div>
                         <div class="detail-bottom">
@@ -241,15 +251,15 @@
                             <i class="fas fa-briefcase"></i>
                             <p>Free E-book, Videos and kits</p>
                         </div>
-                         <div class="edu-item">
+                        <div class="edu-item">
                             <i class="fas fa-briefcase"></i>
                             <p>Free E-book, Videos and kits</p>
                         </div>
-                         <div class="edu-item">
+                        <div class="edu-item">
                             <i class="fas fa-briefcase"></i>
                             <p>Free E-book, Videos and kits</p>
                         </div>
-                         <div class="edu-item">
+                        <div class="edu-item">
                             <i class="fas fa-briefcase"></i>
                             <p>Free E-book, Videos and kits</p>
                         </div>
@@ -272,7 +282,9 @@
                         <p>Senior Developer</p>
                     </div>
                 </div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem tempora veritatis, quod delectus blanditiis eius non ipsum, dolorem reiciendis est consequuntur nostrum deserunt deleniti, nemo dolores quia expedita numquam doloribus!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem tempora veritatis, quod delectus
+                    blanditiis eius non ipsum, dolorem reiciendis est consequuntur nostrum deserunt deleniti, nemo
+                    dolores quia expedita numquam doloribus!</p>
             </div>
             <div class="r-card-1">
                 <div class="r-card-img">
@@ -282,7 +294,9 @@
                         <p>Senior Developer</p>
                     </div>
                 </div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem tempora veritatis, quod delectus blanditiis eius non ipsum, dolorem reiciendis est consequuntur nostrum deserunt deleniti, nemo dolores quia expedita numquam doloribus!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem tempora veritatis, quod delectus
+                    blanditiis eius non ipsum, dolorem reiciendis est consequuntur nostrum deserunt deleniti, nemo
+                    dolores quia expedita numquam doloribus!</p>
             </div>
         </div>
         <h1>Meet our instructors</h1>
@@ -372,6 +386,22 @@
     </footer>
 
     <script src="https://kit.fontawesome.com/aeacbd87f5.js" crossorigin="anonymous"></script>
+
+    <script>
+        let hamMenuIcon = document.getElementById("ham-menu");
+        let navBar = document.getElementById("nav-bar");
+        let navLinks = navBar.querySelectorAll("li");
+        hamMenuIcon.addEventListener("click", () => {
+            navBar.classList.toggle("active");
+            hamMenuIcon.classList.toggle("fa-times");
+        });
+        navLinks.forEach((navLinks) => {
+            navLinks.addEventListener("click", () => {
+                navBar.classList.remove("active");
+                hamMenuIcon.classList.toggle("fa-times");
+            });
+        });
+    </script>
 </body>
 
 </html>
