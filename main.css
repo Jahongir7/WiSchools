@@ -402,6 +402,7 @@ nav ul.active{
     nav ul li{
         margin-top: 30px;
         text-align: center;
+        margin-right: 0;
     }
     nav ul{
         width: 100vw;
